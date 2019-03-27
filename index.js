@@ -104,6 +104,11 @@ app.post('/files/:name', (req, res) => {
   }
 })
 
+app.get('/favicon.ico', (req, res) => {
+  console.log('not available')
+  return res.status(404)
+})
+
 app.listen(port, (err) => {
   if (err) {
     return console.log('something bad happened', err)

@@ -7,7 +7,7 @@ const util = require('util');
 const fs = require('fs');
 const readline = require('readline');
 
-const port = 3000
+const port = "https://node-file-uploader.herokuapp.com/"
 
 class File {
   constructor(path, name) {

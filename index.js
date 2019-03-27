@@ -7,7 +7,7 @@ const util = require('util');
 const fs = require('fs');
 const readline = require('readline');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 class File {
   constructor(path, name) {

@@ -1,0 +1,27 @@
+<div>
+    <h2>
+        <center style="color:red" class="mt-3">
+            UPLOADED FILES:
+        </center>
+    </h2>
+</div>
+<div class="file-list text-center mt-5 container">
+    <div class="row justify-content-md-center">
+    {{#each files}}
+        <div class="col-md-4 mt-4 mb-4">
+            <h4>{{this.name}}</h4>
+            <button class="btn btn-outline-light mr-2">
+                <a target="_blank" href="/{{this.name}}"><i class="fas fa-eye" style="color: black"></i></a>
+            </button>
+           <button class="btn btn-outline-light">
+                <a target="_blank" href="/{{this.name}}" download><i class="fas fa-arrow-alt-circle-down" style="color: black"></i></a> 
+            </button>
+            <embed src="/{{this.name}}" type="application/pdf">
+           
+            <form action="/files/{{this.name}}" method="post">
+                <button type="submit" class="btn btn-outline-light"><i class="fas fa-trash" style="color: black"></i></button>
+            </form>
+        </div>
+    {{/each}}
+    </div>
+</div>
